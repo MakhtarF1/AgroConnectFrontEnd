@@ -72,6 +72,11 @@ export const getMyOffers = async () => {
   return response.data
 }
 
+export const getOffreById = async (id: string) => {
+  const response = await api.get(`/offres/${id}`)
+  return response.data
+}
+
 export const updateOffer = async (id: string, offerData: any) => {
   const response = await api.put(`/offres/${id}`, offerData)
   return response.data
